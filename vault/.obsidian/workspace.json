@@ -1,0 +1,168 @@
+{
+  "main": {
+    "id": "bbaf6808655fe297",
+    "type": "split",
+    "children": [
+      {
+        "id": "dfc420c2a1cfed8c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d01a192aa638842c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1467749e5f62016a",
+    "type": "split",
+    "children": [
+      {
+        "id": "17cb7112529a3840",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92499e2cc4d52104",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cab7c58a78964b4f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "57b795924a211806",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "eb34a3c879e17e49",
+    "type": "split",
+    "children": [
+      {
+        "id": "4075001122c97850",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3524798f9b58a2a3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f646227ec142329d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1de69a912255074c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f3a864288ec4b380",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d01a192aa638842c",
+  "lastOpenFiles": [
+    "BERT.md~",
+    "transformers-lib.md~",
+    "Teacher-Forcing.md~",
+    "BERT.md",
+    "transformers-lib.md",
+    "Future-Mojo-guide.md~",
+    "Transformer-architecture.md~",
+    "1708742710-KDYY.md",
+    "Transformer-architecture.md",
+    "HuggingFace.md~",
+    "Attention-mechanism.md~",
+    "Attention-mechanism.md",
+    "Teacher-Forcing.md",
+    "Future-Mojo-guide.md",
+    "1708742098-FITW.md~",
+    "1708742134-HTSZ.md~",
+    "1708742710-KDYY.md~",
+    "1708743510-KPFA.md",
+    "1708744368-UDWN.md",
+    "1708746993-MQOD.md",
+    "1708757466-HGNK.md",
+    "assets/imgs/masked-multi-head-self-attention.png",
+    "1708742134-HTSZ.md",
+    "1708742098-FITW.md"
+  ]
+}
