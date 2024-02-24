@@ -29,12 +29,12 @@ In the encoder, tokens are processed in parallel.
 
 Key characteristics:
 - No recurrency
-- *Self-Attention*: The [[1708746993-MQOD|attention mechanism]] in the encoder of the transformers architecture is self-attention, where each token can be query, key, and value.
+- *Self-Attention*: The [[Attention-mechanism|attention mechanism]] in the encoder of the transformers architecture is self-attention, where each token can be query, key, and value.
 - Hidden state of a timestep is dependent on all others
 - *Multi-Head Self-Attention*: An attention head consists of parameters Q, K, and V respectively represent query, key, and value. The motivation to multiple heads is enhanced representation: Longer sequences usually contain verb, adj, multiple relationships, so many things to pay attention to.
     ![attention-example.png](assets/imgs/attention-example.png)
-- The input and output of the encoder is of the same dimension, meaning encoder blocks can be stacked for enhanced representation.
-- BERT is encoder-only. GPT is deecoder-only
+- The input and output of the encoder block is of the same dimension, meaning encoder blocks can be stacked for enhanced representation.
+- BERT is an encoder-only model. GPT is decoder-only.
 
 ### Decoder
 
@@ -50,5 +50,5 @@ Key characteristics:
 ## Reference
 
 1. [Foundation Models, Transformers, BERT and GPT](https://heidloff.net/article/foundation-models-transformers-bert-and-gpt)
-2. [[Future Mojo's guide]]
+2. [[Future Mojo|Future Mojo's guide]]
 

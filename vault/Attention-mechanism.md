@@ -16,7 +16,8 @@ Attention mechanism was invented by Dzmitry Bahdanau's [paper](https://arxiv.org
 
 # Self-Attention (in Encoder)
 
-In 2017, the paper "Attention is all you need" introduced the transformers architechture, which uses *self-attention* mechanism in the Encoder
+In 2017, the groundbreaking paper "Attention is All You Need" introduced the transformer architecture, featuring a crucial mechanism known as self-attention in the Encoder. This self-attention mechanism is aptly named because it operates on the input sequence itself to learn embeddings. Each token within the sequence can play the roles of query, key, and value, contributing to a comprehensive understanding of contextual relationships.
+
 
 # Multi-Head
 

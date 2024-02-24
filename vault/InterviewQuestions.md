@@ -1,7 +1,13 @@
-# BERT related Interview topics 
+# (possible) BERT related interview topics 
+
+Other than the big picture of transformers, some details you are expected to know as a NLP specialist:
 
 1. About `[CLS]` token
-What is the `[CLS]` token? Why is it at the start of the sequence? What is it used for? What are the alternatives? 
+
+Also called the classification token. Why is it at the start of the embedding output (`last_hidden_state[0]`): It actually doesn't mattter start or end because it's not a recurrent model. 
+
+You also have to option to not only use the last layer but earlier layers's [CLS].
+
 
 2. About tokenization
 How does tokenization works in BERT? Name other tokenization techniques. What's the tokenization in PhoBert?
@@ -10,3 +16,8 @@ How does tokenization works in BERT? Name other tokenization techniques. What's 
 What is it for? How does it work?
 
 4. How's *layer normalization* in BERT works? How is it compared to batch normalization
+
+Reference
+[stackexchange CLS token](https://datascience.stackexchange.com/questions/66207/what-is-purpose-of-the-cls-token-and-why-is-its-encoding-output-important)
+[huggingface's issue on CLS token](https://github.com/huggingface/transformers/issues/7540)
+
