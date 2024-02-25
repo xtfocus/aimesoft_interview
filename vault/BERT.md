@@ -19,6 +19,7 @@ The output of BERT are embeddings, not predicted next words like GPT's.
 BERT is a masked language model (MLM), meaning the training objective of BERT it to predict the masked token in a sequence, somewhat similar to Continuous Bag of Words (CBOW). Both use *Self-Supervised Learning*, a fancy way to say that no labelling needed for training (thank to the masking trick).
 
 What makes BERT different from CBOW is:
+- choices of [[Tokenizer|tokenization]]
 - the encoder architecture (which allows bidirectionality), 
 - not using windows (so broader context compared to CBOW).
 - BERT was also trained on *next sentence prediction* task (NSP): During pre-training, pairs of sentences are fed into the model, and the model is tasked with predicting whether the second sentence in the pair follows the first sentence in the original text. This objective helps BERT learn relationships between sentences and understand discourse-level context.
@@ -26,7 +27,7 @@ What makes BERT different from CBOW is:
 ## Variants
 
 1. The OG BERT: 
-- wordpiece [[1708763669-GKCN|tokenizer]]
+- wordpiece as tokenizer
 - randomly masking during data preparation
 
 2. RoBERTa (Robustly optimized BERT approach):

@@ -15,4 +15,11 @@ Feel free to explore the repository and leverage its contents for your own NLP i
 
 # TODO
 
-- [>] code to demo tokenizers and CLS based on https://github.com/huggingface/transformers/issues/7540 and https://discuss.huggingface.co/t/how-to-get-cls-embeddings-from-bertfortokenclassification-model/9276/2
+- [x] codes: demo tokenizers and CLS based on https://github.com/huggingface/transformers/issues/7540 and https://discuss.huggingface.co/t/how-to-get-cls-embeddings-from-bertfortokenclassification-model/9276/2
+
+in `codes/notebooks/BertModel outputs and CLS token.ipynb`
+
+
+- [ ] vault: Training details: Optimizer and Scheduler
+
+- [ ] experiment agenda and implementaion: MlOps

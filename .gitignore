@@ -1,0 +1,6 @@
+# Ignore mlruns directory and its contents
+**/mlruns/
+
+# Ignore mlflow.db file recursively
+**/mlflow.db
+
