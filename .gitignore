@@ -4,3 +4,6 @@
 # Ignore mlflow.db file recursively
 **/mlflow.db
 
+**/__pycache__/
+**/.ipynb_checkpoints/
+
