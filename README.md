@@ -19,7 +19,6 @@ Feel free to explore the repository and leverage its contents for your own NLP i
 
 in `codes/notebooks/BertModel outputs and CLS token.ipynb`
 
+- [x] vault: Training details: Optimizer and Scheduler
 
-- [ ] vault: Training details: Optimizer and Scheduler
-
-- [ ] experiment agenda and implementaion: MlOps
+- [x] experiment agenda and implementaion: MlOps
