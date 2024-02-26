@@ -2,6 +2,20 @@ import torch
 import numpy as np
 
 def get_predictions(model, data_loader, device):
+    """
+    Get predictions on data_loader
+    
+    Parameters
+    ----------
+        model: BERT model
+        data_loader: Torch dataloader
+        device: cpu or cuda
+    
+    Return
+    ------
+        Tuple of texts, prediction (binary), probability, actual target values
+    """
+    
     # Set the model to evaluation mode
     model.eval()
     

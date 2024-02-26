@@ -3,7 +3,7 @@ from collections import defaultdict
 from data_preprocessing import BATCH_SIZE
 import torch
 from torch import nn, optim
-from transformers import BertModel, AdamW, get_linear_schedule_with_warmup
+from transformers import AdamW, get_linear_schedule_with_warmup
 from data_preprocessing import train_data_loader, test_data_loader, dev_data_loader,\
                                 MODEL_NAME, class_names, train_size, dev_size
 import numpy as np
@@ -95,8 +95,6 @@ def eval_model(model, data_loader, loss_fn, device, n_examples):
 def train_model(model, optimizer, scheduler, EPOCHS, device):
         
     history = defaultdict(list)
-    best_accuracy = 0
-    best_epoch = 0
     
     for epoch in range(EPOCHS):
         
@@ -141,14 +139,6 @@ def train_model(model, optimizer, scheduler, EPOCHS, device):
         history['val_acc'].append(val_acc)
         history['val_loss'].append(val_loss)
         
-        # If we beat prev performance
-        if val_acc > best_accuracy:
-            best_accuracy = val_acc
-            best_epoch = epoch
-            mlflow.pytorch.log_model(
-                model, artifact_path="{}-{}".format(best_epoch, best_accuracy), 
-            )
-                
     return history
      
         
@@ -159,9 +149,12 @@ def optimizer_scheduler(model):
     
     total_steps = len(train_data_loader) * EPOCHS
     
+    print("len(train_data_loader)=", len(train_data_loader))
+    print(f"Total training steps = {total_steps}")
+    
     scheduler = get_linear_schedule_with_warmup(
         optimizer,
-        num_warmup_steps=5,
+        num_warmup_steps=50,
         num_training_steps=total_steps
     )
     
