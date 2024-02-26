@@ -10,7 +10,7 @@ tags: []
 
 aka Bidirectional Encoder Representations from Transformers is a groundbreaking language model compared to its predecessors like recurrent neural networks (RNNs), word2vec (CBOW, Skip-gram), and tf-idf.
 
-BERT uses Encoder in the [[1708742710-KDYY|transformers architecture]], introduced by the "Attention Is All You Need" paper. BERT is Encoder-only.
+BERT uses Encoder in the [[Transformer-architecture|transformers architecture]], introduced by the "Attention Is All You Need" paper. BERT is Encoder-only.
 
 The output of BERT are embeddings, not predicted next words like GPT's.
 
@@ -21,6 +21,7 @@ BERT is a masked language model (MLM), meaning the training objective of BERT it
 What makes BERT different from CBOW is:
 - choices of [[Tokenizer|tokenization]]
 - the encoder architecture (which allows bidirectionality), 
+
 - not using windows (so broader context compared to CBOW).
 - BERT was also trained on *next sentence prediction* task (NSP): During pre-training, pairs of sentences are fed into the model, and the model is tasked with predicting whether the second sentence in the pair follows the first sentence in the original text. This objective helps BERT learn relationships between sentences and understand discourse-level context.
 
