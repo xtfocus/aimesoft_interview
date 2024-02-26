@@ -1,10 +1,11 @@
 """
-transformers.v3
-model class for sentiment classification
+model classes for sentiment classification
 """
+
 import torch
 from torch import nn
 from transformers import BertModel
+
 from data_preprocessing import MODEL_NAME
 
 
@@ -33,6 +34,7 @@ class SentimentClassifier(nn.Module):
 
         return self.out(dropped)
 
+
 class SentimentClassifierMultiLinear(nn.Module):
     """
     BERT + nn.Linear using [CLS] token (pooled_output)
@@ -56,7 +58,7 @@ class SentimentClassifierMultiLinear(nn.Module):
         last_hidden_state, pooled_output = self.bert(
             input_ids=input_ids,
             attention_mask=attention_mask,
-            return_dict=False,  
+            return_dict=False,
         )
 
         dropped_1 = self.drop1(pooled_output)
@@ -172,8 +174,8 @@ class SentimentClassifierUntrainedCLSMultiLastLayers(nn.Module):
         dropped = self.drop(cat_cls)
 
         return self.out(dropped)
-    
-    
+
+
 class SentimentClassifierUntrainedCLSMultiLastLayersMultiLinear(nn.Module):
     """
     BERT + nn.Linear using the concatenation of last_hidden_state[:,0,...], second_last..., third ...
@@ -184,7 +186,9 @@ class SentimentClassifierUntrainedCLSMultiLastLayersMultiLinear(nn.Module):
         assert (
             n_lasts > 1
         ), "Just use `SentimentClassifier` if you don't want to use multiple layers' outputs"
-        super(SentimentClassifierUntrainedCLSMultiLastLayersMultiLinear, self).__init__()
+        super(
+            SentimentClassifierUntrainedCLSMultiLastLayersMultiLinear, self
+        ).__init__()
 
         self.n_lasts = n_lasts  # Number of last layers to use
 
@@ -199,12 +203,12 @@ class SentimentClassifierUntrainedCLSMultiLastLayersMultiLinear(nn.Module):
         self.out = nn.Linear(32, n_classes)
 
     def forward(self, input_ids, attention_mask):
-        _, _, hidden_states = self.bert(
+        hidden_states = self.bert(
             input_ids=input_ids,
             attention_mask=attention_mask,
             return_dict=False,
             output_hidden_states=True,
-        )
+        ).hidden_states
 
         cls_list = [hidden_states[-i][:, 0, ...] for i in range(1, self.n_lasts + 1)]
 
