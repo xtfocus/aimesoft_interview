@@ -47,6 +47,8 @@ Key characteristics:
     * The output of the encoder (keys and values) serves as the input for cross attention in the decoder.
     * The queries come from the decoder’s own hidden states.
 
+- Generation strategies: greedy decoding, top-k sampling, beam-search, nucleus sampling
+
 ## Reference
 
 1. [Foundation Models, Transformers, BERT and GPT](https://heidloff.net/article/foundation-models-transformers-bert-and-gpt)
